@@ -1,214 +1,197 @@
-EE227|Digital Logic Design (BCS-2A, BCS-2B)
-EE227|Digital Logic Design (BCS-2D, BCS-2E)
-EE227|Digital Logic Design (BCS-2H)
-EE227|Digital Logic Design (BCS-2F, BCS-2J, BCS-2K)
-EE227|Digital Logic Design (BCS-2C, BCS-2G, BCS-2M)
-CS217|Object Oriented Programming (BCS-2A, BCS-2B)
-CS217|Object Oriented Programming (BCS-2C, BCS-2D)
-CS217|Object Oriented Programming (BCS-2E, BCS-2F)
-CS217|Object Oriented Programming (BCS-2G, BCS-2H)
-CS118|Programming Fundamentals  (BCS-2M)
-CS118|Programming Fundamentals  (BCS-2J)
-CS118|Programming Fundamentals  (BCS-2K)
-MT224|Differential Equations (Cal II) (BCS-2A)
-MT224|Differential Equations (Cal II) (BCS-2B)
-MT224|Differential Equations (Cal II) (BCS-2C, BCS-2D)
-MT224|Differential Equations (Cal II) (BCS-2E, BCS-2M, BCS-2J)
-MT224|Differential Equations (Cal II) (BCS-2F, BCS-2G)
-MT224|Differential Equations (Cal II) (BCS-2H)
-MT119|Calculus and Analytical Geometry (BCS-2K)
-EE117|Applied Physics (BCS-2K)
-SS113|Pakistan Studies (BCS-2A, BCS-2B)
-SS113|Pakistan Studies (BCS-2C)
-SS113|Pakistan Studies (BCS-2D, BCS-2E, BCS-2F)
-SS113|Pakistan Studies (BCS-2G, BCS-2H)
-SS113|Pakistan Studies (BCS-2M, BCS-2J)
-SS113|Pakistan Studies (BCS-2K)
-SS152|Communication & Presentation Skills (BCS-2A1, BCS-2E1, BCS-2F1, BCS-2M1, BCS-2J1)
-SS152|Communication & Presentation Skills (BCS-2B1)
-SS152|Communication & Presentation Skills (BCS-2A2, BCS-2E2, BCS-2F2, BCS-2B2, BCS-2J2)
-SS152|Communication & Presentation Skills (BCS-2B2, CS-G2, CS-H2)
-SS152|Communication & Presentation Skills (BCS-2C1, CS-D1)
-SS152|Communication & Presentation Skills (BCS-2C2, CS-D2)
-SS152|Communication & Presentation Skills (BCS-2G1, CS-H1)
-SL152|Communication & Presentation Skills Lab (BCS-2A1, CS-B1, CS-C1)
-SL152|Communication & Presentation Skills Lab (BCS-2A2, CS-B2,  CS-C2)
-SL152|Communication & Presentation Skills Lab (BCS-2D1, CS-E1, CS-F1)
-SL152|Communication & Presentation Skills Lab (BCS-2D2, CS-E2, CS-F2)
-SL152|Communication & Presentation Skills Lab (BCS-2G1, CS-H1, CS-I1)
-SL152|Communication & Presentation Skills Lab (BCS-2G2, CS-H2, CS-I2)
-SL152|Communication & Presentation Skills Lab (BCS-2J1)
-SL152|Communication & Presentation Skills Lab (BCS-2J2)
-CL118|Programming Fundamental Lab (BCS-2M1)
-CL118|Programming Fundamental Lab (BCS-2M2)
-CL118|Programming Fundamental Lab (BCS-2J1)
-CL118|Programming Fundamental Lab (BCS-2J2)
-CL118|Programming Fundamental Lab (BCS-2K1)
-CL118|Programming Fundamental Lab (BCS-2K2)
-CL217|Object Oriented Programming Lab (BCS-2A1)
-CL217|Object Oriented Programming Lab (BCS-2A2)
-CL217|Object Oriented Programming Lab (BCS-2B1)
-CL217|Object Oriented Programming Lab (BCS-2B2)
-CL217|Object Oriented Programming Lab (BCS-2C1)
-CL217|Object Oriented Programming Lab (BCS-2C2)
-CL217|Object Oriented Programming Lab (BCS-2D1)
-CL217|Object Oriented Programming Lab (BCS-2D2)
-CL217|Object Oriented Programming Lab (BCS-2E1)
-CL217|Object Oriented Programming Lab (BCS-2E2)
-CL217|Object Oriented Programming Lab (BCS-2F1)
-CL217|Object Oriented Programming Lab (BCS-2F2)
-CL217|Object Oriented Programming Lab (BCS-2G1)
-CL217|Object Oriented Programming Lab (BCS-2G2)
-CL217|Object Oriented Programming Lab (BCS-2H1)
-CL217|Object Oriented Programming Lab (BCS-2H2)
-EL227|Digital Logic Design Lab (BCS-2A1)
-EL227|Digital Logic Design Lab (BCS-2A2)
-EL227|Digital Logic Design Lab (BCS-2B1)
-EL227|Digital Logic Design Lab (BCS-2B2)
-EL227|Digital Logic Design Lab (BCS-2C1)
-EL227|Digital Logic Design Lab (BCS-2C2)
-EL227|Digital Logic Design Lab (BCS-2D1)
-EL227|Digital Logic Design Lab (BCS-2D2)
-EL227|Digital Logic Design Lab (BCS-2E1)
-EL227|Digital Logic Design Lab (BCS-2E2)
-EL227|Digital Logic Design Lab (BCS-2F1)
-EL227|Digital Logic Design Lab (BCS-2F2)
-EL227|Digital Logic Design Lab (BCS-2G1)
-EL227|Digital Logic Design Lab (BCS-2G2)
-EL227|Digital Logic Design Lab (BCS-2H1)
-EL227|Digital Logic Design Lab (BCS-2H2)
-EL227|Digital Logic Design Lab (BCS-2M1)
-EL227|Digital Logic Design Lab (BCS-2M2)
-EL227|Digital Logic Design Lab (BCS-2J1)
-EL227|Digital Logic Design Lab (BCS-2J2)
-EL227|Digital Logic Design Lab (BCS-2K1)
-EL227|Digital Logic Design Lab (BCS-2K2)
-CS219|Database Systems (BCS-4A, BCS-4B)
-CS219|Database Systems (BCS-4C, BCS-4D)
-CS220|Operating Systems (BCS-4A, BCS-4B)
-CS220|Operating Systems (BCS-4C, BCS-4D)
-CS302|Design & Analysis of Algorithms (BCS-4A, BCS-4B)
-CS302|Design & Analysis of Algorithms (BCS-4C, BCS-4D)
-EE229|Comp. Organization & Assembly Lang. (BCS-4A, BCS-4B)
-CS218|Data Structures (BCS-4A, BCS-4B)
-CS218|Data Structures (BCS-4C)
-MT205|Probability & Statistics (BCS-4A, BCS-4D)
-MT205|Probability & Statistics (BCS-4B, BCS-4E)
-MT205|Probability & Statistics (BCS-4C)
-MT205|Probability & Statistics (BCS-4F, BCS-4G)
-CS211|Discrete Structures (BCS-4A)
-SS217|Mass Communication (BCS-4A)
-NS202|Environmental Studies (BCS-4A)
-SS118|Psychology (BCS-4A)
-MG414|Entrepreneurship (BCS-4A, BCS-4B)
-MG103|Finance and Accounting (BCS-4A)
-MG336|Principles of Leadership (BCS-4A, BCS-4B)
-CL219|Database Systems Lab (BCS-4A1)
-CL219|Database Systems Lab (BCS-4A2)
-CL219|Database Systems Lab (BCS-4B1)
-CL219|Database Systems Lab (BCS-4B2)
-CL219|Database Systems Lab (BCS-4C1)
-CL219|Database Systems Lab (BCS-4C2)
-CL219|Database Systems Lab (BCS-4D1)
-CL219|Database Systems Lab (BCS-4D2)
-CL220|Operating Systems Lab (BCS-4A1)
-CL220|Operating Systems Lab (BCS-4A2)
-CL220|Operating Systems Lab (BCS-4B1)
-CL220|Operating Systems Lab (BCS-4B2)
-CL220|Operating Systems Lab (BCS-4C1)
-CL220|Operating Systems Lab (BCS-4C2)
-CL220|Operating Systems Lab (BCS-4D1)
-CL220|Operating Systems Lab (BCS-4D2)
-EL229|Comp. Organization & Assembly Lang. Lab (BCS-4A1)
-EL229|Comp. Organization & Assembly Lang. Lab (BCS-4A2)
-EL229|Comp. Organization & Assembly Lang. Lab (BCS-4B1)
-EL229|Comp. Organization & Assembly Lang. Lab (BCS-4B2)
-CL218|Data Structures Lab (BCS-4A1)
-CL218|Data Structures Lab (BCS-4A2)
-CL218|Data Structures Lab (BCS-4B1)
-CL218|Data Structures Lab (BCS-4B2)
-CL218|Data Structures Lab (BCS-4C1)
-CL218|Data Structures Lab (BCS-4C2)
-CS307|Computer Networks (BCS-6A, BCS-6B)
-CS307|Computer Networks (BCS-6C, BCS-6D)
-CS307|Computer Networks (BCS-6E, BCS-6F)
-CS401|Artificial Intelligence (BCS-6A, BCS-6B)
-CS401|Artificial Intelligence (BCS-6C, BCS-6D)
-CS401|Artificial Intelligence (BCS-6E, BCS-6F)
-CS302|Design & Analysis of Algorithms (BCS-6A, BCS-6B)
-CS302|Design & Analysis of Algorithms (BCS-6C)
-CS302|Design & Analysis of Algorithms (BCS-6D, BCS-6E, BCS-6F)
-CS406|Web Programming (BCS-6A)
-CS440|Software for Mobile Devices (BCS-6A)
-CS451|Advance Database Concepts (BCS-6A)
-EE402|Digital Image Processing (BCS-6A)
-CS433|Advanced Programming (BCS-6A)
-CS422|Human Computer Interaction (BCS-6A, BCS-6C)
-CS422|Human Computer Interaction (BCS-6B)
-CS203|Database Systems (BCS-6A)
-CS205|Operating Systems (BCS-6A)
-CS309|Object Oriented Analysis & Design (BCS-6A)
-MT203|Differential Equations (BCS-6A)
-MT207|Numerical Methods (BCS-6A)
-SS108|Technical & Business Writing (BCS-6A, BCS-6B)
-SS108|Technical & Business Writing (BCS-6C, BCS-6D, BCS-6E)
-SS108|Technical & Business Writing (BCS-6F, BCS-6G)
-CL309|Object Oriented Analysis & Design Lab (BCS-6A1)
-CL309|Object Oriented Analysis & Design Lab (BCS-6A2)
-CL203|Database Systems Lab (BCS-6A1)
-CL203|Database Systems Lab (BCS-6A2)
-CL205|Operating Systems Lab (BCS-6A1)
-CL205|Operating Systems Lab (BCS-6A2)
-CL307|Computer Networks Lab (BCS-6A1)
-CL307|Computer Networks Lab (BCS-6A2)
-CL307|Computer Networks Lab (BCS-6B1)
-CL307|Computer Networks Lab (BCS-6B2)
-CL307|Computer Networks Lab (BCS-6C1)
-CL307|Computer Networks Lab (BCS-6C2)
-CL307|Computer Networks Lab (BCS-6D1)
-CL307|Computer Networks Lab (BCS-6D2)
-CL307|Computer Networks Lab (BCS-6E1)
-CL307|Computer Networks Lab (BCS-6E2)
-CL307|Computer Networks Lab (BCS-6F1)
-CL307|Computer Networks Lab (BCS-6F2)
-CS449|Professional Issues in IT (BCS-8A, BCS-8B, BCS-8C)
-CS449|Professional Issues in IT (BCS-8D, BCS-8E, BCS-8F)
-CS303|Software Engineering (BCS-8A, BCS-8B)
-CS307|Computer Networks (BCS-8A)
-EE204|Computer Architecture (BCS-8A)
-CS301|Theory of Automata (BCS-8A)
-CS406|Web Programming (BCS-8B)
-CS317|Information Retrieval (BCS-8A)
-CS440|Software for Mobile Devices (BCS-8B)
-CS402|Compiler Construction (BCS-8A)
-CS497|Software Testing (BCS-8A, BCS-8B)
-CS497|Software Testing (BCS-8C, BCS-8D)
-CS450|Introduction to Software Project Management (BCS-8A, BCS-8B)
-CS411|Network Security (BCS-8A, BCS-8B)
-CS447|Enterprise Information Systems (BCS-8A)
-CS481|Data Science (BCS-8A, BCS-8B)
-CL307|Computer Networks Lab (BCS-8A1)
-CL307|Computer Networks Lab (BCS-8A2)
-EE502|Advanced Computer Architecture (MCS-2A)
-CS505|Advanced Operating Systems (MCS-2A)
-CS534|Theory of Automata - II (MCS-2A)
-SS511|Research Methodology (MCS-2A)
-CS549|Computational Intelligence (MCS-2A)
-CS535|Natural Language Processing (MCS-2A)
-CS525|Requirement Engineering (MCS-2A)
-CS540|Design Pattern (MCS-2A)
-CS527|Software Engineering Technologies (MCS-2A)
-CS519|Software QA & Management (MSP-2A)
-MG513|Management & Organizational Behavior (MSP-2A)
-CS540|Design Pattern (MSP-2A)
-SS511|Research Methodology (MSP-2A)
-MG560|Human Resource Management (MSP-2A)
-CS525|Requirement Engineering (MSP-2A)
-CS587|Research Project - I (MS-SPM)
-CS588|Research Project - II (MS-SPM)
-DS502|Big Data Analytics / Mining Massive Datasets (MDS-2A)
-DS503|Machine Learning for Data Science (MDS-2A)
-CS511|Social Network Analysis (MDS-2A)
-SS511|Research Methodology (MDS-2A)
-CS637|Advanced Computer Vision (MDS-4A)
-CS510|Deep Learning (MDS-4A)
+CS588 Research Project - II (MS-SPM)
+SS152 Communication & Presentation Skills
+CS637 Advanced Computer Vision
+CS527 Software Engineering Technologies
+EE227 Digital Logic Design
+EE402 Digital Image Processing
+CS525 Requirement Engineering
+EL227 Digital Logic Design Lab
+CS118 Programming Fundamentals
+CS220 Operating Systems
+CS219 Database Systems
+CS510 Deep Learning
+CS301 Theory of Automata
+CS411 Network Security
+MT119 Calculus and Analytical Geometry
+CS540 Design Pattern
+CS449 Professional Issues in IT
+CS307 Computer Networks
+CL118 Programming Fundamental Lab
+CS422 Human Computer Interaction
+CL217 Object Oriented Programming Lab
+CL219 Database Systems Lab
+MG336 Principles of Leadership
+SL152 Communication & Presentation Skills Lab
+CS203 Database Systems
+DS503 Machine Learning for Data Science
+CS505 Advanced Operating Systems
+DS502 Big Data Analytics / Mining Massive Datasets
+CL307 Computer Networks Lab
+EL229 Comp. Organization & Assembly Lang. Lab
+CS402 Compiler Construction
+SS108 Technical & Business Writing
+NS202 Environmental Studies
+EE229 Comp. Organization & Assembly Lang.
+MT203 Differential Equations
+CS440 Software for Mobile Devices
+CS450 Introduction to Software Project Management
+CS534 Theory of Automata - II
+CS217 Object Oriented Programming
+SS118 Psychology
+CS481 Data Science
+CS451 Advance Database Concepts
+CL309 Object Oriented Analysis & Design Lab
+CS549 Computational Intelligence
+EE204 Computer Architecture
+CL203 Database Systems Lab
+CL220 Operating Systems Lab
+CS406 Web Programming
+EE117 Applied Physics
+CS302 Design & Analysis of Algorithms
+CS511 Social Network Analysis
+CS433 Advanced Programming
+MG560 Human Resource Management
+CS317 Information Retrieval
+MG103 Finance and Accounting
+MT207 Numerical Methods
+CL205 Operating Systems Lab
+MG513 Management & Organizational Behavior
+MT224 Differential Equations (Cal II)
+SS113 Pakistan Studies
+CS587 Research Project - I (MS-SPM)
+CS535 Natural Language Processing
+CS309 Object Oriented Analysis & Design
+MG414 Entrepreneurship
+MT205 Probability & Statistics
+CS211 Discrete Structures
+SS217 Mass Communication
+CS497 Software Testing
+CS401 Artificial Intelligence
+CS447 Enterprise Information Systems
+CL218 Data Structures Lab
+CS218 Data Structures
+CS303 Software Engineering
+CS205 Operating Systems
+EE502 Advanced Computer Architecture
+CS519 Software QA & Management
+SS511 Research Methodology
+CL117 Intro. to Info & Comm. Technologies 
+CS118 Programming Fundamental  
+MT119 Calculus and Analytical Geometry 
+SS111 Islamic & Religious Studies 
+EE117 Applied Physics  
+SS150 English Composition and Comprehension 
+CL117 Programming Fundamental Lab 
+SL150 English Composition and Comprehension  Lab 
+EE229 Comp. Organization & Assembly Lang. 
+CS218 Data Structures 
+CS217 Object Oriented Programming 
+CS211 Discrete Structures 
+EE227 Digital Logic Design 
+MT104 Linear Algebra 
+MT224 Differential Equations (Cal II) 
+MG414 Entrepreneurship 
+MG103 Finance and Accounting 
+MG220 Marketing Management 
+EL229 Comp. Organization & Assembly Lang. Lab 
+CL218 Data Structures Lab 
+CL217 Object Oriented Programming Lab 
+EL227 Digital Logic Design Lab 
+CS201 Data Structures 
+CS422 Human Computer Interaction 
+CS309 Object Oriented Analysis & Design 
+CS203 Database Systems 
+CS205 Operating Systems 
+CS409 Data Warehousing & Data mining 
+CS406 Web Programming 
+CS440 Software for Mobile Devices 
+CS433 Advanced Programming 
+CS317 Information Retrieval 
+CS495 Fundamental of Computer Vision 
+EE402 Digital Image Processing 
+MT206 Probability & Statistics 
+SS217 Mass Communication 
+SS127 Sociology 
+SS206 Organizational Behavior 
+SS118 Psychology 
+SS204 International Relations 
+SS220 Modern Politics & Government 
+MT115 Calculus-II 
+CL309 Object Oriented Analysis & Design Lab 
+CL203 Database Systems Lab 
+CL205 Operating Systems Lab 
+CS409 Data Warehousing & Data mining Lab 
+CS307 Computer Networks 
+EE204 Computer Architecture 
+CS303 Software Engineering 
+CS301 Theory of Automata 
+CS401 Artificial Intelligence 
+CS302 Design & Analysis of Algorithms 
+CS402 Compiler Construction 
+CS497 Software Testing 
+CL307 Computer Networks Lab 
+CS449 Professional Issues in IT 
+CS501 Advanced Analysis of Algorithms (MS)
+CS507 Theory of Programming Languages (MS)
+EE502 Advanced Computer Architecture (MS)
+SS511 Research Methodology (MS)
+CS319 Applied Programming 
+CS557 Statistical Pattern Recog. & Learning (MS)
+CS566 Evolutionay Computation (MS)
+CS429 Data Mining (MS)
+CN503 Internet of Things (MS)
+CS540 Design Patterns
+CS591 MS Thesis - I
+CS592 MS Thesis - II
+CS517 Software Project Management (MS)
+CS563 Software Process Management & Metrics (MS)
+CS558 Marketing Management (MS)
+CS511 Advanced Software Engineering (MS)
+CS625 Topics in Software Engineering (MS)
+CS587 MS Research Project I (MS)
+CS588 MS Research Project II (MS)
+CS319 Applied Programming (MS-DS)
+DS501 Stat. and Math. Methods in Data Science
+DS500 Data Science Tools and Technique
+CS553 Applied Image Processing
+CS579 Cloud Computing
+DS591 MS Thesis-I
+MG220 Marketing Management
+SS220 Modern Politics & Government
+CS563 Software Process Management & Metrics
+CS517 Software Project Management
+CS501 Advanced Analysis of Algorithms
+CS118 Programming Fundamental
+MT224 Differential Equations
+SL150 English Composition and Comprehension  Lab
+CS201 Data Structures
+CS429 Data Mining
+MT206 Probability & Statistics
+CN503 Internet of Things
+MT115 Calculus-II
+CS409 Data Warehousing & Data mining Lab
+CS319 Applied Programming
+CS507 Theory of Programming Languages
+CS495 Fundamental of Computer Vision
+MT104 Linear Algebra
+SS204 International Relations
+SS111 Islamic & Religious Studies
+CS625 Topics in Software Engineering
+CS588 Research Project - II
+SS127 Sociology
+CL117 Programming Fundamental Lab
+CL117 Intro. to Info & Comm. Technologies
+CS587 MS Research Project I
+CS409 Data Warehousing & Data mining
+CS566 Evolutionay Computation
+CS557 Statistical Pattern Recog. & Learning
+CS587 Research Project - I
+CS511 Advanced Software Engineering
+CS588 MS Research Project II
+SS150 English Composition and Comprehension
+CS558 Marketing Management
+SS206 Organizational Behavior
+CS510 Deep Learning
+CS511 Social Network Analysis
+
+

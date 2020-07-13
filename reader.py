@@ -89,8 +89,8 @@ class Reader:
         """
         Obtain section from course name.
         """
-        sections = re.findall(r"[BM]?CS-?\d?\w?\d?", name)
-        print(name, sections)
+        # https://stackoverflow.com/a/12999616
+        sections = re.findall(r"[BM]?(?:CS|SP|DS)-?\d?\w?\d?", name)
         return ", ".join(sections)
 
     def display_courses(self, sections=True):
@@ -238,19 +238,18 @@ if __name__ == "__main__":
         create_db=True,
     )
     db.generate_mapping(create_tables=True)
-    # timetable.get_courses(sections=False)
     # timetable.dump_to_db()
-    # timetable.display_courses()
+    timetable.display_courses(sections=False)
 
-    courses = (
-        "Discrete Structures (BCS-4A)",
-        "Data Structures (BCS-4C)",
-        "Data Structures Lab (BCS-4C",
-        "Assembly L. (BCS-4A)",
-        "Assembly Lang. Lab (BCS-4A",
-        "Entrepreneurship (BCS-4A)",
-        "Probability & Statistics (BCS-4A)",
-    )
+    # courses = (
+    #     "Discrete Structures (BCS-4A)",
+    #     "Data Structures (BCS-4C)",
+    #     "Data Structures Lab (BCS-4C",
+    #     "Assembly L. (BCS-4A)",
+    #     "Assembly Lang. Lab (BCS-4A",
+    #     "Entrepreneurship (BCS-4A)",
+    #     "Probability & Statistics (BCS-4A)",
+    # )
 
     # courses = (
     #     "Operating Systems",
@@ -272,5 +271,5 @@ if __name__ == "__main__":
     # for i in courses:
     #     print(">>> ", i)
 
-    export_timetable(output_path, courses=courses, dump_type="md")
+    # export_timetable(output_path, courses=courses, dump_type="md")
 
