@@ -18,6 +18,7 @@ class Courses(db.Entity):
     end_time = Required(str)
     room = Required(str)
     day = Required(str)
+    semester = Required(str)
 
 
 class CoursesInfo(db.Entity):
@@ -34,8 +35,15 @@ class Reader:
         self.timings = self.info[3]
         self.content = self.info[4:-3]
 
+    def _clean_course_name(self, course_title):
+        """
+        Course title without section
+        """
+        section = self.get_section(course_title)
+        return course_title.rstrip(f"({section})").strip()
+
     @db_session
-    def get_courses(self, sections=True):
+    def get_courses(self, sections=True, db_dump=True):
         """
         Extracts all courses from xlsx file which are being offered.
         """
@@ -50,9 +58,12 @@ class Reader:
         if sections:
             return subjects
 
-        for i in sorted({i.split("(")[0].strip() for i in subjects}):
-            CoursesInfo(name=i)
-        return sorted({i.split("(")[0].strip() for i in subjects})
+        courses = sorted({self._clean_course_name(i) for i in subjects})
+
+        if db_dump:
+            for i in courses:
+                CoursesInfo(name=i)
+        return courses
 
     def get_course_time(self, name, sheet_location):
         """
@@ -85,13 +96,17 @@ class Reader:
     def get_venue(self, content):
         return content[1]
 
-    def get_section(self, name):
+    def get_section(self, name, joiner=","):
         """
         Obtain section from course name.
         """
         # https://stackoverflow.com/a/12999616
+        if joiner in name:
+            joiner = ", "
+        else:
+            joiner = " & "
         sections = re.findall(r"[BM]?(?:CS|SP|DS)-?\d?\w?\d?", name)
-        return ", ".join(sections)
+        return f"{joiner}".join(sections)
 
     def display_courses(self, sections=True):
         for i in self.get_courses(sections=sections):
@@ -122,13 +137,14 @@ class Reader:
         Returns list of course objects
         """
         DAYS_INFO = self.get_days_info()
+        courses_added = {}
         # TODO: Simplify this logic
         for day in DAYS:
             for column in range(len(DAYS_INFO[day])):
                 for index, course_title in enumerate(DAYS_INFO[day][column]):
                     if course_title and " (" in course_title:
                         # https://stackoverflow.com/questions/1546226/simple-way-to-remove-multiple-spaces-in-a-string
-                        course_title = " ".join(course_title.split())
+                        course_title = " ".join(course_title.split()).strip()
 
                         course_start_timing = self.get_course_time(course_title, index)
 
@@ -138,37 +154,53 @@ class Reader:
                             course_start_timing, lab_course=is_lab_course
                         )
                         section = self.get_section(course_title)
-
                         try:
-                            Courses(
-                                name=course_title,
-                                # name=course_title[: course_title.find("(")],
-                                section="MCS" if not section else section,
-                                start_time=course_start_timing,
-                                end_time=course_end_timing,
-                                room=self.get_venue(DAYS_INFO[day][column]),
-                                day=day,
-                            )
+                            course_title = course_title.rstrip(f"({section})").strip()
+                            key = course_title + section
+                            if not courses_added.get(key):
+                                courses_added[key] = 1
+                                if "lab" not in course_title.lower():
+                                    try:
+                                        next_day = DAYS[DAYS.index(day) + 2][:3]
+                                        days = f"{day[:3]}, {next_day}"
+                                    except IndexError:
+                                        days = day
+                                    course_days = f"{days}"
+
+                                else:
+                                    splitter = "," if "," in section else "&"
+                                    section = section.split(splitter)[0].strip()[:-1]
+                                    course_days = day[:3]
+                                
+                                semester = re.search(r'\d', section)
+                                
+                                if semester:
+                                    semester = semester.group()
+                                    if 'lab' not in course_title.lower():
+                                        section = section.replace(semester, '')
+                                else:
+                                    semester = "unknown"
+                                Courses(
+                                    name=course_title,
+                                    section="MCS" if not section else section,
+                                    start_time=course_start_timing,
+                                    end_time=course_end_timing,
+                                    room=self.get_venue(DAYS_INFO[day][column]),
+                                    day=course_days,
+                                    semester = semester,
+                                )
                         except Exception as e:
                             print(e)
 
 
 def export_timetable(export_directory, courses=None, dump_type="json"):
     # total hours - consumed hours
-    if dump_type == "json":
-        export_directory += "json/"
-    elif dump_type == "text":
-        export_directory += "text/"
-    elif dump_type == "md":
-        export_directory += "md/"
+    export_directory = f"{dump_type}/"
 
     with db_session:
         my_dict = {}
         # section_timing = {}
-        a = sorted(
-            select(c for c in Courses)[:], key=lambda x: DAYS.index(x.day)
-        )
-
+        a = sorted(select(c for c in Courses)[:], key=lambda x: DAYS.index(x.day))
         b = sorted(a, key=lambda x: int(utils.convert_to_24h(x.start_time)))
 
         for course in b:
@@ -234,42 +266,11 @@ if __name__ == "__main__":
     timetable = Reader(files_path + selected_timetable)
     db.bind(
         provider="sqlite",
-        filename=f"{selected_timetable.split('.')[0]}.sqlite",
+        filename=f"{selected_timetable.split('.')[0]}.db",
         create_db=True,
     )
     db.generate_mapping(create_tables=True)
-    # timetable.dump_to_db()
-    timetable.display_courses(sections=False)
-
-    # courses = (
-    #     "Discrete Structures (BCS-4A)",
-    #     "Data Structures (BCS-4C)",
-    #     "Data Structures Lab (BCS-4C",
-    #     "Assembly L. (BCS-4A)",
-    #     "Assembly Lang. Lab (BCS-4A",
-    #     "Entrepreneurship (BCS-4A)",
-    #     "Probability & Statistics (BCS-4A)",
-    # )
-
-    # courses = (
-    #     "Operating Systems",
-    #     "Mass Communication",
-    #     "Probability & Statistics",
-    #     "Environmental Studies",
-    #     "Principles of Leadership",
-    #     "Design & Analysis of Algorithms",
-    #     "Psychology",
-    #     "Database Systems",
-    # )
-
-    # Cleanup
-    # for i in os.listdir(output_path):
-    #     if os.path.isfile(i):
-    #         os.remove(output_path + i)
-
-    # print("Extracting timetable for given courses:")
-    # for i in courses:
-    #     print(">>> ", i)
-
-    # export_timetable(output_path, courses=courses, dump_type="md")
+    timetable.dump_to_db()
+    timetable.get_courses(sections=False)
+    # timetable.display_courses(sections=False)
 

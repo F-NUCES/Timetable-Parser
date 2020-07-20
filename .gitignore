@@ -1,7 +1,6 @@
 bak/
 __pycache__
-tempCodeRunnerFile.py
+temp*
 test*
 public/
-course_files/
-source_files/
+
