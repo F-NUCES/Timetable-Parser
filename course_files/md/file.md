@@ -1,11 +1,3 @@
----
-title: FAST Time Table (\today{})
-geometry: margin=2cm
-header-includes:
-    - \usepackage{setspace}
-    - \doublespacing
-    - \usepackage{lineno}
----
 
 
 # Timetable on Day Mon - Wed

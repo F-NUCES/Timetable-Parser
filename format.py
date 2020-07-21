@@ -58,7 +58,8 @@ class Course:
         }
 
     def to_md(self):
-        return f"{self.name.split('(')[0].strip(): <50} | {self.room: <23} | {self.day: <11} | {self.start_time: <25} - {self.end_time: <25} |\n"
+        day = ", ".join(self.day)
+        return f"{self.name:<50} | {self.room:<23} | {day:<11} | {self.section} | {self.start_time:<25} - {self.end_time:<25} |\n"
 
     def to_json(self, filename=None, data=None):
         if data:
@@ -81,7 +82,7 @@ class Course:
         return "lab" in self.name.lower()
 
     def get_text(self):
-        return f"{self.name.split('(')[0].strip(): <40}\t{self.section.replace('BCS-',''): <8}\t{self.room: <13}\t{self.day: <11}\t{self.start_time: <9} - {self.end_time: <9}\n\n"
+        return f"{self.name: <40}\t{self.section}\t{self.room: <13}\t{self.day: <11}\t{self.start_time: <9} - {self.end_time: <9}\n\n"
 
     def __repr__(self):
         return f"{self.name}"

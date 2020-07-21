@@ -16,17 +16,17 @@ path="course_files/md"
 
 cwd=$(pwd)
 
-$(rm -rf $path/*.md $path/*.pdf)
+# $(rm -rf $path/*.md $path/*.pdf)
 
-python reader.py
+python algorithms.py
+
+mv file.md $path
 
 cd $path
 
-cat BC*.md >>timetable.md
-
 echo "$template" > timetable_mod.md
 
-cat BC*.md >>timetable_mod.md
+cat file.md >> timetable_mod.md
 
 pandoc -s -o timetable.pdf timetable_mod.md -V papersize:a4
 

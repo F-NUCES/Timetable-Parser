@@ -176,10 +176,10 @@ class Reader:
                                 
                                 if semester:
                                     semester = semester.group()
-                                    if 'lab' not in course_title.lower():
-                                        section = section.replace(semester, '')
                                 else:
                                     semester = "unknown"
+                                    
+                                section = re.sub('[0-9]', '', section)
                                 Courses(
                                     name=course_title,
                                     section="MCS" if not section else section,
