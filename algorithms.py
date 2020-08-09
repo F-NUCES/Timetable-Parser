@@ -1,6 +1,7 @@
-import requests
 import pendulum
+import requests
 from format import Course
+
 
 server_url = "http://localhost:5000"
 
@@ -22,7 +23,10 @@ def get_courses_info(semester_number="4"):
     for index, course in enumerate(courses_list, 0):
         r = requests.get(f"{server_url}/course", params={"name": course})
         output = r.json()
-        if output[0]["semester"] == semester_number and "BCS" in output[0]["section"]:
+        if (
+            output[0]["semester"] == semester_number
+            and "BCS" in output[0]["section"]
+        ):
             courses_info = courses_info + output
     return courses_info
 
@@ -49,9 +53,14 @@ for i in get_courses_info():
 courses_obj = []
 
 for i in cleaned_courses:
-# for i in sorted(cleaned_courses, key=lambda x: x["start_time"]):
+    # for i in sorted(cleaned_courses, key=lambda x: x["start_time"]):
     c = Course(
-        i["name"], i["room"], i["day"], i["section"], i["start_time"], i["end_time"]
+        i["name"],
+        i["room"],
+        i["day"],
+        i["section"],
+        i["start_time"],
+        i["end_time"],
     )
     courses_obj.append(c)
 
@@ -61,7 +70,7 @@ with open("file.md", "a") as f:
     end_day = 2
     num = 0
     timetable_heading = False
-    
+
     for i in sorted(courses_obj, key=lambda x: days_in_week.index(x.day[0])):
         if days_in_week.index(i.day[0]) != num:
             num += 1
@@ -71,14 +80,14 @@ with open("file.md", "a") as f:
 
         if not timetable_heading:
             if len(i.day) == 2:
-                days_info = f"{days_in_week[start_day]} - {days_in_week[end_day]}"
+                days_info = (
+                    f"{days_in_week[start_day]} - {days_in_week[end_day]}"
+                )
             else:
                 days_info = i.day[0]
-            
-            f.write(
-                f"\n\n# Timetable on Day {days_info}\n\n"
-            )
-            
+
+            f.write(f"\n\n# Timetable on Day {days_info}\n\n")
+
             f.write(
                 """| **Subject**                           | **Venue** | **Day**       | **Section**       | **Timing**       |
 | --------------------------------- | ----- | --------- | -----| :----------:|\n"""
@@ -86,4 +95,3 @@ with open("file.md", "a") as f:
             timetable_heading = True
 
         f.write(i.to_md())
-

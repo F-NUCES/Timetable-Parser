@@ -75,67 +75,67 @@ CS205 Operating Systems
 EE502 Advanced Computer Architecture
 CS519 Software QA & Management
 SS511 Research Methodology
-CL117 Intro. to Info & Comm. Technologies 
-CS118 Programming Fundamental  
-MT119 Calculus and Analytical Geometry 
-SS111 Islamic & Religious Studies 
-EE117 Applied Physics  
-SS150 English Composition and Comprehension 
-CL117 Programming Fundamental Lab 
-SL150 English Composition and Comprehension  Lab 
-EE229 Comp. Organization & Assembly Lang. 
-CS218 Data Structures 
-CS217 Object Oriented Programming 
-CS211 Discrete Structures 
-EE227 Digital Logic Design 
-MT104 Linear Algebra 
-MT224 Differential Equations (Cal II) 
-MG414 Entrepreneurship 
-MG103 Finance and Accounting 
-MG220 Marketing Management 
-EL229 Comp. Organization & Assembly Lang. Lab 
-CL218 Data Structures Lab 
-CL217 Object Oriented Programming Lab 
-EL227 Digital Logic Design Lab 
-CS201 Data Structures 
-CS422 Human Computer Interaction 
-CS309 Object Oriented Analysis & Design 
-CS203 Database Systems 
-CS205 Operating Systems 
-CS409 Data Warehousing & Data mining 
-CS406 Web Programming 
-CS440 Software for Mobile Devices 
-CS433 Advanced Programming 
-CS317 Information Retrieval 
-CS495 Fundamental of Computer Vision 
-EE402 Digital Image Processing 
-MT206 Probability & Statistics 
-SS217 Mass Communication 
-SS127 Sociology 
-SS206 Organizational Behavior 
-SS118 Psychology 
-SS204 International Relations 
-SS220 Modern Politics & Government 
-MT115 Calculus-II 
-CL309 Object Oriented Analysis & Design Lab 
-CL203 Database Systems Lab 
-CL205 Operating Systems Lab 
-CS409 Data Warehousing & Data mining Lab 
-CS307 Computer Networks 
-EE204 Computer Architecture 
-CS303 Software Engineering 
-CS301 Theory of Automata 
-CS401 Artificial Intelligence 
-CS302 Design & Analysis of Algorithms 
-CS402 Compiler Construction 
-CS497 Software Testing 
-CL307 Computer Networks Lab 
-CS449 Professional Issues in IT 
+CL117 Intro. to Info & Comm. Technologies
+CS118 Programming Fundamental
+MT119 Calculus and Analytical Geometry
+SS111 Islamic & Religious Studies
+EE117 Applied Physics
+SS150 English Composition and Comprehension
+CL117 Programming Fundamental Lab
+SL150 English Composition and Comprehension  Lab
+EE229 Comp. Organization & Assembly Lang.
+CS218 Data Structures
+CS217 Object Oriented Programming
+CS211 Discrete Structures
+EE227 Digital Logic Design
+MT104 Linear Algebra
+MT224 Differential Equations (Cal II)
+MG414 Entrepreneurship
+MG103 Finance and Accounting
+MG220 Marketing Management
+EL229 Comp. Organization & Assembly Lang. Lab
+CL218 Data Structures Lab
+CL217 Object Oriented Programming Lab
+EL227 Digital Logic Design Lab
+CS201 Data Structures
+CS422 Human Computer Interaction
+CS309 Object Oriented Analysis & Design
+CS203 Database Systems
+CS205 Operating Systems
+CS409 Data Warehousing & Data mining
+CS406 Web Programming
+CS440 Software for Mobile Devices
+CS433 Advanced Programming
+CS317 Information Retrieval
+CS495 Fundamental of Computer Vision
+EE402 Digital Image Processing
+MT206 Probability & Statistics
+SS217 Mass Communication
+SS127 Sociology
+SS206 Organizational Behavior
+SS118 Psychology
+SS204 International Relations
+SS220 Modern Politics & Government
+MT115 Calculus-II
+CL309 Object Oriented Analysis & Design Lab
+CL203 Database Systems Lab
+CL205 Operating Systems Lab
+CS409 Data Warehousing & Data mining Lab
+CS307 Computer Networks
+EE204 Computer Architecture
+CS303 Software Engineering
+CS301 Theory of Automata
+CS401 Artificial Intelligence
+CS302 Design & Analysis of Algorithms
+CS402 Compiler Construction
+CS497 Software Testing
+CL307 Computer Networks Lab
+CS449 Professional Issues in IT
 CS501 Advanced Analysis of Algorithms (MS)
 CS507 Theory of Programming Languages (MS)
 EE502 Advanced Computer Architecture (MS)
 SS511 Research Methodology (MS)
-CS319 Applied Programming 
+CS319 Applied Programming
 CS557 Statistical Pattern Recog. & Learning (MS)
 CS566 Evolutionay Computation (MS)
 CS429 Data Mining (MS)
@@ -193,5 +193,3 @@ CS558 Marketing Management
 SS206 Organizational Behavior
 CS510 Deep Learning
 CS511 Social Network Analysis
-
-

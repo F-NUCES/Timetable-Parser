@@ -1,7 +1,4 @@
-import utils
 import json
-import io
-import os
 
 
 class Course:
@@ -13,6 +10,7 @@ class Course:
         section: str,
         start_time: str,
         end_time: str,
+        semester: str,
     ):
         """
         @args:
@@ -35,6 +33,7 @@ class Course:
         self.room = room
         self.day = day
         self.course_type = "BS" if "MS" not in self.name else "MS"
+        self.semester = semester
 
     @classmethod
     def from_dict(cls, mydict):
@@ -45,6 +44,7 @@ class Course:
             end_time=mydict["end_time"],
             room=mydict["room"],
             days=mydict["days"],
+            semester=mydict["semester"],
         )
 
     def to_dict(self):
@@ -85,7 +85,7 @@ class Course:
         return f"{self.name: <40}\t{self.section}\t{self.room: <13}\t{self.day: <11}\t{self.start_time: <9} - {self.end_time: <9}\n\n"
 
     def __repr__(self):
-        return f"{self.name}"
+        return f"{self.name}: {self.section}"
 
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.name}: {self.section}"
