@@ -29,7 +29,9 @@ DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
 class Reader:
     def __init__(self, filename):
-        self.info = list(load_workbook(filename=filename).active.values)
+        data = load_workbook(filename)
+        sheets = data.sheetnames
+        self.info = list(data[sheets[1]].values)
         self.periods = self.info[2]
         self.timings = self.info[3]
         self.content = self.info[4:-3]
@@ -45,6 +47,8 @@ class Reader:
             # TODO: Why first two indexes are missed? [Add Documentation]
             for subject in row[2:]:
                 if subject:
+                    print(row)
+                    print(subject)
                     subjects.append(subject.strip())
 
         if sections:
@@ -238,7 +242,7 @@ if __name__ == "__main__":
         create_db=True,
     )
     db.generate_mapping(create_tables=True)
-    # timetable.dump_to_db()
+    timetable.dump_to_db()
     timetable.display_courses(sections=False)
 
     # courses = (
