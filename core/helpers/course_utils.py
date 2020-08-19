@@ -12,7 +12,9 @@ def get_section(name, joiner=","):
         joiner = ", "
     else:
         joiner = " & "
-    sections = re.findall(r"[BM]?(?:CS|SP|DS)-?\d?\w?\d?", name)
+    sections = re.findall(r"[BM]?(?:CS|SP|DS|SE)-?\d?\w?\d?", name)
+    if len(sections) == 1:
+        return sections[0]
     return f"{joiner}".join(sections)
 
 

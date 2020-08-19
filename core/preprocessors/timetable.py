@@ -43,10 +43,10 @@ class Reader:
 
         for row in self.content:
             if row[0]:
-                if row[0].strip() == DAYS[count]:
+                if row[0].strip().startswith(DAYS[count]):
                     count += 1
             course_info[DAYS[count - 1]].append(row)
-
+            
         return course_info
 
     def get_courses_info(self):
@@ -89,8 +89,11 @@ class Reader:
                                 course_days = f"{days}"
 
                             else:
-                                splitter = "," if "," in section else "&"
-                                section = section.split(splitter)[0].strip()[:-1]
+                                if ',' not in section and '&' not in section:
+                                    section = section
+                                else: 
+                                    splitter = "," if "," in section else "&"
+                                    section = section.split(splitter)[0].strip()[:-1]
                                 course_days = day[:3]
 
                             semester = re.search(r"\d", section)
@@ -100,11 +103,11 @@ class Reader:
                             else:
                                 semester = "unknown"
 
-                            section = re.sub("[0-9]", "", section)
+                            filtered_section = re.sub("[0-9]", "", section)
 
                             _course = Course(
                                 name=course_title,
-                                section="MCS" if not section else section,
+                                section="MCS" if not filtered_section else filtered_section,
                                 start_time=course_start_timing,
                                 end_time=course_end_timing,
                                 room=self.get_venue(DAYS_INFO[day][column]),
