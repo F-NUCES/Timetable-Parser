@@ -3,4 +3,4 @@ from core.exporters.database import Database
 
 # pt.main()
 
-Database("latest1").add_course_info()
+Database("latest").add_course_info()

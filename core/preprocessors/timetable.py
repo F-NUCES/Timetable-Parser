@@ -12,7 +12,9 @@ DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
 class Reader:
     def __init__(self, filename="core/source_files/latest.xlsx"):
-        self.info = list(load_workbook(filename=filename).active.values)
+        data = load_workbook(filename)
+        sheets = data.sheetnames
+        self.info = list(data[sheets[1]].values)
         self.periods = self.info[2]
         self.timings = self.info[3]
         self.content = self.info[4:-3]

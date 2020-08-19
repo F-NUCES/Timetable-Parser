@@ -40,7 +40,7 @@ def generate_end_time(course_start_time, lab_course=False):
     # TODO: Timing for lab [X]
     # TODO: Interval check am -> pm conversion
     time, interval = course_start_time.split()
-    hour, minute = [int(i) for i in time.split(":")]
+    hour, minute = [int(float(i)) for i in time.split(":")]
     interval = interval.replace(".", "").upper().replace("NOON", "PM")
 
     if lab_course:
