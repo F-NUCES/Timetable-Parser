@@ -91,7 +91,7 @@ def get_course_time(name, sheet_location, timings, periods):
                 time, interval = timings[i].split()
                 interval = interval.replace(".", "").upper()
                 hour, minute = [int(i) for i in time.split(":")]
-                minute += periods[sheet_location - 1]
+                minute += int(periods[sheet_location - 1])
                 time = f"{str(hour).zfill(2)}:{str(minute).zfill(2)} {interval.replace('NOON', 'PM')}"
                 break
     else:

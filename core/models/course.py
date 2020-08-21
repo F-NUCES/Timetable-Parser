@@ -59,7 +59,7 @@ class Course:
 
     def to_md(self):
         day = ", ".join(self.day)
-        return f"{self.name:<50} | {self.room:<23} | {day:<11} | {self.section} | {self.start_time:<25} - {self.end_time:<25} |\n"
+        return f"{self.name} | {self.room:<23} | {day:<11} | {self.section} | {self.start_time} - {self.end_time} |\n"
 
     def to_json(self, filename=None, data=None):
         if data:
