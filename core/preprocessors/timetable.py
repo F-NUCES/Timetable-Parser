@@ -7,14 +7,14 @@ from core.models.course import Course
 import core.preprocessors.validators as validators
 
 
-DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
 
 
 class Reader:
     def __init__(self, filename="core/source_files/latest.xlsx"):
         data = load_workbook(filename)
         sheets = data.sheetnames
-        self.info = list(data[sheets[1]].values)
+        self.info = list(data[sheets[0]].values)
         self.periods = self.info[2]
         self.timings = self.info[3]
         self.content = self.info[4:-3]
@@ -65,6 +65,7 @@ class Reader:
                         continue
 
                     course_title = common_utils.remove_multiple_spaces(course_title)
+                    print(course_title)
                     course_start_timing = course_utils.get_course_time(
                         course_title, index, self.timings, self.periods
                     )

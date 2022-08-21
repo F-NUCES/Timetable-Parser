@@ -1,6 +1,7 @@
 # Course title detection happens here.
 def is_course_title(text_stream):
-    if not text_stream:
+    
+    if not text_stream or isinstance(text_stream, int):
         return False
     elif len(text_stream) < 12:
         return False

@@ -5,7 +5,7 @@ from core.preprocessors.timetable import Reader
 
 
 class Database:
-    def __init__(self, database_name):
+    def __init__(self, database_name="latest"):
         self.course_data = Reader()
         db_model.db.bind(
             provider="sqlite",
@@ -13,7 +13,6 @@ class Database:
             create_db=True,
         )
         db_model.db.generate_mapping(create_tables=True)
-
         self.database_name = database_name
 
     @db_session
@@ -33,4 +32,12 @@ class Database:
 
         for course_title in sorted(names):
             db_model.CourseTitle(name=course_title)
+
+    @db_session
+    def get_courses(self):
+        return db_model.DBCourses.select()
+
+    @db_session
+    def get_courses_list(self):
+        return db_model.CourseTitle.select()
 
